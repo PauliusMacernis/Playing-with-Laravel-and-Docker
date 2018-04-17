@@ -8,8 +8,15 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "paulius-macernis/playing-with-laravel-and-docker-private-package": "1.0.x-dev"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package.git"
+        }
+    ],
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",

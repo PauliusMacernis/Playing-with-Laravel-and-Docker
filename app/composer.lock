@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2120fa77d42a42b4210cdbe1c114e2",
+    "content-hash": "1b6fe2e00e2a23d5ae11e4e432022447",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -956,6 +956,46 @@
                 "random"
             ],
             "time": "2018-04-04T21:24:14+00:00"
+        },
+        {
+            "name": "paulius-macernis/playing-with-laravel-and-docker-private-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package.git",
+                "reference": "f6dd512c950db662d096f42a85988b803ec64211"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/get/f6dd512c950db662d096f42a85988b803ec64211.zip",
+                "reference": "f6dd512c950db662d096f42a85988b803ec64211",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PauliusMacernis\\PlayingWithLaravelAndDockerPrivatePackage\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Redmond"
+                }
+            ],
+            "description": "An example private composer package",
+            "homepage": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package",
+            "support": {
+                "source": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/src/f6dd512c950db662d096f42a85988b803ec64211/?at=master"
+            },
+            "time": "2018-04-17T21:04:28+00:00"
         },
         {
             "name": "psr/container",
@@ -3902,7 +3942,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "paulius-macernis/playing-with-laravel-and-docker-private-package": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
