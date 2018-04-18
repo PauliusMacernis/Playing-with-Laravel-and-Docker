@@ -10,14 +10,41 @@ RUN apt-get -yqq update \
     && chmod +x /usr/local/bin/composer \
     && composer --version
 
+# Cache Composer dependencies
+WORKDIR /tmp
+# Copies the composer.json, composer.lock and auth.json files into
+#  the temporary folder (/tmp/) with the ADD instruction. When using ADD with more
+#  than one source file, the destination (/tmp/) must be a directory and end with a
+#  forward slash.
+ADD app/composer.json app/composer.lock app/auth.json /tmp/
+# Additionally, we need the database/ folder so the installation doesn't fail; the
+#  database/seeds and database/factories paths are defined in the Composer autoload and
+#  must exist.
+# The final Docker instruction in the cache step removes the files installed in the
+#  /tmp/vendor/ folder. We don't need them anymore because the vendor files get copied
+#  from Composer's cache during the second composer install. The cached vendor files
+#  remain in the layer (~/.composer/cache), so we can use them later.
+RUN mkdir -p database/seeds \
+    mkdir -p database/factories \
+    && composer install \
+        --no-interaction \
+        --no-plugins \
+        --no-scripts \
+        --prefer-dist \
+    && rm -rf composer.json composer.lock auth.json \
+        database/ vendor/
+#END. Cache Composer dependencies
+
 # Add the project
 ADD app /var/www/html
+
 WORKDIR /var/www/html
+
 RUN composer install \
---no-interaction \
---no-plugins \
---no-scripts \
---prefer-dist
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --prefer-dist
 
 
 # Alternative way to install composer: https://stackoverflow.com/a/42147748

@@ -963,12 +963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package.git",
-                "reference": "f6dd512c950db662d096f42a85988b803ec64211"
+                "reference": "788854ef2ad28582741dabc2c0ae05ee12801379"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/get/f6dd512c950db662d096f42a85988b803ec64211.zip",
-                "reference": "f6dd512c950db662d096f42a85988b803ec64211",
+                "url": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/get/788854ef2ad28582741dabc2c0ae05ee12801379.zip",
+                "reference": "788854ef2ad28582741dabc2c0ae05ee12801379",
                 "shasum": ""
             },
             "type": "library",
@@ -987,15 +987,15 @@
             ],
             "authors": [
                 {
-                    "name": "Paul Redmond"
+                    "name": "Paul Redmond, Paulius Macernis"
                 }
             ],
             "description": "An example private composer package",
             "homepage": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package",
             "support": {
-                "source": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/src/f6dd512c950db662d096f42a85988b803ec64211/?at=master"
+                "source": "https://bitbucket.org/paulius-macernis/playing-with-laravel-and-docker-private-package/src/788854ef2ad28582741dabc2c0ae05ee12801379/?at=master"
             },
-            "time": "2018-04-17T21:04:28+00:00"
+            "time": "2018-04-17T23:14:16+00:00"
         },
         {
             "name": "psr/container",
